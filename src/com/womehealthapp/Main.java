@@ -4,16 +4,19 @@ package com.womehealthapp;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+        // Initialize features
         CycleTracker cycleTracker = new CycleTracker();
         MoodAdvisor moodAdvisor = new MoodAdvisor();
         WeatherOutfit weatherOutfit = new WeatherOutfit();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Sample data for testing
+        cycleTracker.setCycleData(28, 1); // Example: 28 days cycle, day 1
+        System.out.println(cycleTracker.getCurrentPhase());
+
+        moodAdvisor.setMood("happy");
+        System.out.println(moodAdvisor.getAdvice());
+
+        weatherOutfit.setWeather("cold");
+        System.out.println(weatherOutfit.suggestOutfit());
     }
 }

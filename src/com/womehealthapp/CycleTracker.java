@@ -19,7 +19,7 @@ public class CycleTracker {
             return "Follicular Phase";
         }
         else {
-            return "Luteal Phase"
+            return "Luteal Phase";
         }
 
 }
